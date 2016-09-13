@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/agenda.css" media="screen" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="public/js/moment.js"></script>
+
 
 
 </head>
@@ -19,7 +21,7 @@
             <h1>Tareas:<h1>
         <input type="text" id="textInput" placeholder="Agregar tarea">
         <button id="add">Agregar</button>
-        <button id="quitartodo">Borrar todas</button>
+        <button id="removeAll">Borrar todas</button>
         <ul id="list"></ul>
      </div>
      <div class="agenda">
@@ -34,14 +36,14 @@
                  </thead>
                  <tbody>
                      <!-- Single event in a single day -->
-                    
+
                  </tbody>
              </table>
          </div>
      </div>
    </div>
-
    <script src="public/js/agenda.js"></script>
+
 
  </body>
 </html>

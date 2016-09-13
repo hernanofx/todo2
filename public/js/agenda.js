@@ -37,10 +37,9 @@ const EVENTS = [{
 
 function addEventToAgenda(title, dueDate) {
     const dayOfMonth = dueDate.getUTCDate();
-    const monthNumber = dueDate.getUTCMonth();
+    const monthNumber =  dueDate.getUTCMonth();
     const year = dueDate.getUTCFullYear();
     const dayOfWeek = dueDate.getUTCDay();
-
     const hours = dueDate.getUTCHours();
     const minutes = dueDate.getUTCMinutes();
     const seconds = dueDate.getUTCSeconds();
@@ -48,7 +47,7 @@ function addEventToAgenda(title, dueDate) {
     jQuery('tbody').append(`
     <tr>
       <td class="agenda-date" class="active" rowspan="1">
-          <div class="dayofmonth">${dayOfMonth}</div>
+          <div class="dayofmonth">${dayOfMonth} </div>
           <div class="dayofweek">${dayOfWeek}</div>
           <div class="shortdate text-muted">${monthNumber + 1}, ${year}</div>
       </td>
