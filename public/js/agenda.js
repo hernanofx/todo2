@@ -1,48 +1,41 @@
 const EVENTS = [{
     id: 1,
     title: 'evento de ejemplo 1',
-    cat: 'Personal',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-30T22:00:00.000Z'
 }, {
     id: 2,
     title: 'evento de ejemplo 2',
-    cat: 'Trabajo',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-30T23:00:00.000Z'
 }, {
     id: 3,
     title: 'evento de ejemplo 3',
-    cat: 'Estudio',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
     title: 'evento de ejemplo 4',
-    cat: 'Deporte',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-31T01:00:00.000Z'
 }, {
     id: 5,
     title: 'evento de ejemplo 5',
-    cat: 'Trabajo',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-31T02:00:00.000Z'
 }, {
     id: 6,
     title: 'evento de ejemplo 6',
-    cat: 'Trabajo',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-31T03:00:00.000Z'
 }, {
     id: 7,
     title: 'evento de ejemplo 7',
-    cat: 'Deporte',
-    description: '',
+    description: 'la la la',
     dueDate: '2016-10-31T04:00:00.000Z'
 }, ];
 
-function addEventToAgenda(title, dueDate) {
+function addEventToAgenda(title, dueDate, description) {
     var dayOfMonth = dueDate.getUTCDate();
     var monthNumber =  dueDate.getUTCMonth();
     var year = dueDate.getUTCFullYear();
@@ -62,8 +55,8 @@ function addEventToAgenda(title, dueDate) {
     <tr>
       <td class="agenda-date" class="active" rowspan="1">
           <div class="dayofmonth">${pdayOfMonth} </div>
-          <div class="dayofweek">${pdayOfWeek}</div>
           <div class="shortdate text-muted">${pMonth}, ${year}</div>
+          <div class="dayofweek">${pdayOfWeek}</div>
       </td>
       <td class="agenda-time">
           ${hours}:${minutes}:${seconds}
@@ -86,13 +79,14 @@ function addEventToAgenda(title, dueDate) {
 
 
 jQuery('#add').on('click', function() {
-    const value = jQuery('#tarea').val();
+    var value = jQuery('#inputtarea').val();
     addEventToAgenda(value, new Date ( ));
 });
 
+
 EVENTS.forEach(function(event) {
 
-    const d = new Date(event.dueDate);
-
+    var d = new Date(event.dueDate);
     addEventToAgenda(event.title, d);
+
 });
