@@ -44,6 +44,25 @@ function addEventToAgenda(title, dueDate) {
     const minutes = dueDate.getUTCMinutes();
     const seconds = dueDate.getUTCSeconds();
 
+    //const pdayOfMonth = document.getElementsById('dayOfMonth'),
+    //const pmonthNumber = document.getElementsById('monthNumber'),
+    //const pyear = document.getElementsById('year'),
+    //const pdayOfWeek = document.getElementsById('dayOfWeek'),
+    //const phours = document.getElementsById('hours'),
+    //const pminutes = document.getElementsById('minutes'),
+    //const pseconds = document.getElementsById('seconds'),
+    //const week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+
+    //pdayOfWeek.textContent = week[dayOfWeekfweek];
+
+    //pdayOfMonth.textContent = dayOfMonth;
+
+    //const month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    //pMonth.textContent = month[monthNumber];
+
+    //pyear.textContent = year;
+
+
     jQuery('tbody').append(`
     <tr>
       <td class="agenda-date" class="active" rowspan="1">
@@ -63,6 +82,7 @@ function addEventToAgenda(title, dueDate) {
     </tr>
   `);
 }
+
 
 jQuery('#add').on('click', function() {
     const value = jQuery('#textInput').val();
