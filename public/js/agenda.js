@@ -36,31 +36,32 @@ const EVENTS = [{
 }, ];
 
 function addEventToAgenda(title, dueDate) {
-    const dayOfMonth = dueDate.getUTCDate();
-    const monthNumber =  dueDate.getUTCMonth();
-    const year = dueDate.getUTCFullYear();
-    const dayOfWeek = dueDate.getUTCDay();
-    const hours = dueDate.getUTCHours();
-    const minutes = dueDate.getUTCMinutes();
-    const seconds = dueDate.getUTCSeconds();
+    var dayOfMonth = dueDate.getUTCDate();
+    var monthNumber =  dueDate.getUTCMonth();
+    var year = dueDate.getUTCFullYear();
+    var dayOfWeek = dueDate.getUTCDay();
+    var hours = dueDate.getUTCHours();
+    var minutes = dueDate.getUTCMinutes();
+    var seconds = dueDate.getUTCSeconds();
 
-    //const pdayOfMonth = document.getElementsById('dayOfMonth'),
-    //const pmonthNumber = document.getElementsById('monthNumber'),
-    //const pyear = document.getElementsById('year'),
-    //const pdayOfWeek = document.getElementsById('dayOfWeek'),
-    //const phours = document.getElementsById('hours'),
-    //const pminutes = document.getElementsById('minutes'),
-    //const pseconds = document.getElementsById('seconds'),
-    //const week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    var pdayOfMonth = document.getElementById('dayOfMonth');
+    var pmonthNumber = document.getElementById('monthNumber');
+    var pyear = document.getElementById('year');
+    var pdayOfWeek = document.getElementById('dayOfWeek');
+    var phours = document.getElementById('hours');
+    var pminutes = document.getElementById('minutes');
+    var pseconds = document.getElementById('seconds');
 
-    //pdayOfWeek.textContent = week[dayOfWeekfweek];
+    var week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 
-    //pdayOfMonth.textContent = dayOfMonth;
+    //pdayOfWeek.textContent = week[dayOfWeek];
 
-    //const month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-    //pMonth.textContent = month[monthNumber];
+    pdayOfMonth.textContent = dayOfMonth;
 
-    //pyear.textContent = year;
+    var month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    pMonth.textContent = month[monthNumber];
+
+    pyear.textContent = year;
 
 
     jQuery('tbody').append(`
