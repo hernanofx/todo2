@@ -46,30 +46,25 @@ function addEventToAgenda(title, dueDate) {
 
     var pdayOfMonth = document.getElementById('dayOfMonth');
     var pmonthNumber = document.getElementById('monthNumber');
-    var pyear = document.getElementById('year');
     var pdayOfWeek = document.getElementById('dayOfWeek');
-    var phours = document.getElementById('hours');
-    var pminutes = document.getElementById('minutes');
-    var pseconds = document.getElementById('seconds');
 
     var week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 
-    //pdayOfWeek.textContent = week[dayOfWeek];
+    pdayOfWeek.textContent = week[dayOfWeek];
 
     pdayOfMonth.textContent = dayOfMonth;
 
     var month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     pMonth.textContent = month[monthNumber];
 
-    pyear.textContent = year;
 
 
     jQuery('tbody').append(`
     <tr>
       <td class="agenda-date" class="active" rowspan="1">
-          <div class="dayofmonth">${dayOfMonth} </div>
-          <div class="dayofweek">${dayOfWeek}</div>
-          <div class="shortdate text-muted">${monthNumber + 1}, ${year}</div>
+          <div id="dayOfMonth" class="dayofmonth">${dayOfMonth} </div>
+          <div id="dayOfWeek" class="dayofweek">${dayOfWeek}</div>
+          <div id="monthNumber" class="shortdate text-muted">${monthNumber + 1}, ${year}</div>
       </td>
       <td class="agenda-time">
           ${hours}:${minutes}:${seconds}
