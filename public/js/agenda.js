@@ -44,27 +44,23 @@ function addEventToAgenda(title, dueDate) {
     var minutes = dueDate.getUTCMinutes();
     var seconds = dueDate.getUTCSeconds();
 
-    var pdayOfMonth = document.getElementById('dayOfMonth');
-    var pmonthNumber = document.getElementById('monthNumber');
-    var pdayOfWeek = document.getElementById('dayOfWeek');
-
     var week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 
-    pdayOfWeek.textContent = week[dayOfWeek];
+    var pdayOfWeek = week[dayOfWeek];
 
-    pdayOfMonth.textContent = dayOfMonth;
+    var pdayOfMonth = dayOfMonth;
 
     var month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-    pMonth.textContent = month[monthNumber];
+    var pMonth = month[monthNumber];
 
 
 
     jQuery('tbody').append(`
     <tr>
       <td class="agenda-date" class="active" rowspan="1">
-          <div id="dayOfMonth" class="dayofmonth">${dayOfMonth} </div>
-          <div id="dayOfWeek" class="dayofweek">${dayOfWeek}</div>
-          <div id="monthNumber" class="shortdate text-muted">${monthNumber + 1}, ${year}</div>
+          <div class="dayofmonth">${pdayOfMonth} </div>
+          <div class="dayofweek">${pdayOfWeek}</div>
+          <div class="shortdate text-muted">${pMonth}, ${year}</div>
       </td>
       <td class="agenda-time">
           ${hours}:${minutes}:${seconds}
