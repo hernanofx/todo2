@@ -3,7 +3,7 @@ var ul = document.getElementById('list'),
     add = document.getElementById('add');
 
 function addLi(targetUl) {
-    var inputText = document.getElementById('inputtarea').value,
+    var inputText = document.getElementById('inputevento').value,
         li = document.createElement('li'),
         textNode = document.createTextNode(inputText + ' '),
         removeButton = document.createElement('button');
@@ -14,7 +14,7 @@ function addLi(targetUl) {
     }
 
     removeButton.className = 'removeMe';
-    removeButton.innerHTML = ' Hecho!';
+    removeButton.innerHTML = 'Finalizado';
     removeButton.setAttribute('onclick', 'removeMe(this);');
 
     li.appendChild(textNode);

@@ -80,7 +80,7 @@ function addEventToAgenda(title, dueDate, description) {
 
 
 jQuery('#add').on('click', function() {
-    var value = jQuery('#inputtarea').val();
+    var value = jQuery('#inputevento').val();
     addEventToAgenda(value, new Date ( ));
 });
 
