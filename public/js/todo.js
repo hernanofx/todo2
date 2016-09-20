@@ -3,7 +3,7 @@ var ul = document.getElementById('list'),
     add = document.getElementById('add');
 
 function addLi(targetUl) {
-    var inputText = document.getElementById('text').value,
+    var inputText = document.getElementById('inputtarea').value,
         li = document.createElement('li'),
         textNode = document.createTextNode(inputText + ' '),
         removeButton = document.createElement('button');

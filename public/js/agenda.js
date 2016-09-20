@@ -53,10 +53,11 @@ function addEventToAgenda(title, dueDate, description) {
 
     jQuery('tbody').append(`
     <tr>
-      <td class="agenda-date" class="active" rowspan="1">
+          <td class="agenda-date" class="active" rowspan="1">
           <div class="dayofmonth">${pdayOfMonth} </div>
           <div class="shortdate text-muted">${pMonth}, ${year}</div>
           <div class="dayofweek">${pdayOfWeek}</div>
+
       </td>
       <td class="agenda-time">
           ${hours}:${minutes}:${seconds}
