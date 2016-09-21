@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/agenda.css" media="screen" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="public/js/moment.js"></script>
-
-
+    <link rel="stylesheet" type="text/css" href="public/css/datetimepicker.css" />
+    <script src="public/js/jquery.js"></script>
 
 </head>
 
@@ -21,11 +19,14 @@
             <h1>Tareas:<h1>
         <input type="text" id="inputevento" placeholder="Evento">
         <input type="text" id="inputeventocategoria" placeholder="Categoria">
+        <input type="text" id="datetimepicker_dark" placeholder="Fecha">
+
         <button id="add">Agregar</button>
         <button id="removeAll">Borrar todas</button>
         <ul id="list"></ul>
 
-     </div>
+
+  </div>
      <div class="agenda">
          <div class="table-responsive">
              <table class="table table-condensed table-bordered">
@@ -35,6 +36,8 @@
                          <th>Hora</th>
                          <th>Descripción</th>
                          <th>Categoria</th>
+                         <th>Fecha Futura</th>
+
                      </tr>
                  </thead>
                  <tbody>
@@ -45,10 +48,13 @@
          </div>
      </div>
    </div>
+
+   <script src="public/js/datetimepicker.js"></script>
+   <script src="public/js/datetimepicker2.js"></script>
+   <script src="public/js/moment.js"></script>
    <script src="public/js/agenda.js"></script>
    <script src="public/js/todo.js"></script>
-
-
+   <script src="public/js/jquery.js"></script>
 
  </body>
 </html>
