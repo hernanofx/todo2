@@ -1,6 +1,6 @@
 # TODO list, Agenda, javascript, html y css
 
-Una simple agenda con calendario y tareas
+Una simple agenda con calendario y tareas, muy simple
 
 
 # Vista previa
