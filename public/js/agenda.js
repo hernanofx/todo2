@@ -88,7 +88,7 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
             <div class="dayofweek">${fdiasDeSemana}</div>
             </td>
 
-            <td class="agenda-time">
+            <td class="agenda-time w3-center">
             ${horas2}:${minutos2}:${segundos2}
             </td>
 
@@ -112,7 +112,7 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
             <div class="dayofweek">${pdayOfWeek}</div>
             </td>
 
-            <td class="agenda-time">
+            <td class="agenda-time w3-center">
               ${hours}:${minutes}:${seconds}
           </td>
     </tr>

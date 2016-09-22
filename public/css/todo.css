@@ -44,19 +44,19 @@ button {
 }
 
 button#add {
-    background-color: #46b98a;
+    background-color: #0580FB;
 }
 
 button#add:hover {
-    background-color: #3fa67c;
+    background-color: #509BE5;
 }
 
 button#removeAll {
-    background-color: #E0645C;
+    background-color: #EA5334;
 }
 
 button#removeAll:hover {
-    background-color: #c95a52;
+    background-color: #ED7B65;
 }
 
 button.removeMe {
@@ -66,6 +66,9 @@ button.removeMe {
     font-weight: 700;
 }
 
+button.removeMe {
+    background-color: #A8E98E;
+}
 button.removeMe:hover {
     background-color: #46b98a;
 }

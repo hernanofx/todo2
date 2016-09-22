@@ -14,7 +14,7 @@ function addLi(targetUl) {
     }
 
     removeButton.className = 'removeMe';
-    removeButton.innerHTML = 'Finalizado';
+    removeButton.innerHTML = 'Cumplido';
     removeButton.setAttribute('onclick', 'removeMe(this);');
 
     li.appendChild(textNode);
