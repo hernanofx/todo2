@@ -37,7 +37,7 @@ const EVENTS = [{
 }, {
     id: 7,
     title: 'evento de ejemplo 7',
-    category: 'la la la',
+    category: 'Sociales',
     fechafutura: '2023-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T04:00:00.000Z'
 }, ];
@@ -104,9 +104,9 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
           </div>
       </td>
           <td class="agenda-date" class="active" rowspan="1">
-          <div class="diadelmes">${fdiaDelMes} </div>
+          <div class="dayofmonth">${fdiaDelMes} </div>
           <div class="shortdate text-muted">${fmeses}, ${año2}</div>
-          <div class="diadesemana">${fdiasDeSemana}</div>
+          <div class="dayofweek">${fdiasDeSemana}</div>
 
       </td>
       <td class="agenda-time">
