@@ -9,7 +9,7 @@ function addLi(targetUl) {
         removeButton = document.createElement('button');
 
     if (inputText.split(' ').join('').length === 0) {
-        alert('No input');
+        alert('No pusiste nada');
         return false;
     }
 

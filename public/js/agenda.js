@@ -35,7 +35,7 @@ const EVENTS = [{
     dueDate: '2016-10-31T04:00:00.000Z'
 }, ];
 
-function addEventToAgenda(description, dueDate, category) {
+function addEventToAgenda(description, dueDate, category ) {
     var dayOfMonth = dueDate.getUTCDate();
     var monthNumber =  dueDate.getUTCMonth();
     var year = dueDate.getUTCFullYear();
@@ -80,10 +80,10 @@ function addEventToAgenda(description, dueDate, category) {
 
 
 jQuery('#add').on('click', function() {
-    var value = jQuery('#inputevento').val();
+    var value_evento = jQuery('#inputevento').val();
     var value_categoria = jQuery('#inputeventocategoria').val();
 
-    addEventToAgenda(value, new Date ( ), value_categoria);
+    addEventToAgenda(value_evento, new Date ( ), value_categoria);
 });
 
 

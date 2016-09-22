@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tareas</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/agenda.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="public/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/datetimepicker.css" />
     <script src="public/js/jquery.js"></script>
 
@@ -16,22 +18,23 @@
 <body>
     <div class="wrapper">
         <div class="border">
-            <h1>Tareas:<h1>
+              <h2>Agenda y tareas<h2>
+
         <input type="text" id="inputevento" placeholder="Evento">
         <input type="text" id="inputeventocategoria" placeholder="Categoria">
         <input type="text" id="datetimepicker_dark" placeholder="Fecha">
 
+
         <button id="add">Agregar</button>
         <button id="removeAll">Borrar todas</button>
-        <ul id="list"></ul>
+        <ul class="w3-ul" id="list"></ul>
+        </div>
 
-
-  </div>
      <div class="agenda">
-         <div class="table-responsive">
-             <table class="table table-condensed table-bordered">
+         <div class="table-responsive w3-responsive">
+             <table class="table table-condensed table-bordered w3-table-all w3-hoverable w3-striped w3-card-4">
                  <thead>
-                     <tr>
+                     <tr class="w3-brown">
                          <th>Fecha</th>
                          <th>Hora</th>
                          <th>Descripción</th>
