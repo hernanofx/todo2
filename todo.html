@@ -17,19 +17,24 @@
 <body>
     <div class="wrapper">
         <div class="border">
-            <h2>Agenda y tareas<h2>
-
-              <tr>
-                <td>
-                  <input type="text" class="w3-half" id="inputevento" placeholder="Evento">
-                </td>
-                <td>
-                <input type="date" id="fechafutura" placeholder="Fecha">
+          <h2>Agenda y tareas<h2>
+            <div class="w3-row-padding">
+              <div class="w3-half">
+                <tr>
+                  <td>
+                    <input type="text"  id="inputevento" placeholder="   Evento">
+                  </td>
+              </div>
+              <div class="w3-half">
+                  <td>
+                    <input type="datetime-local" class="" id="fechafutura" placeholder="Fecha">
                   </td>
               </tr>
-              <tr>
+            </div>
+            <div class="w3-half">
+              <tr class="">
                 <td>
-                  <select class="w3-select w3-border w3-half w3-padding" id="inputeventocategoria" name="opciones">
+                  <select class="w3-select w3-border w3-padding" id="inputeventocategoria" name="opciones">
                     <option value="" disabled selected>Categoria</option>
                     <option value="Trabajo">Trabajo</option>
                     <option value="Bandas">Bandas</option>
@@ -37,15 +42,17 @@
                     <option value="Sociales">Sociales</option>
                   </select>
                 </td>
-                  <td>
-                    <button id="add">Agregar</button>
-                    <button id="removeAll">Borrar todas</button>
-                    <ul class="w3-ul" id="list"></ul>
+            </div>
+            <div class="w3-half">
+                <td>
+                  <button class="" id="add">Agregar</button>
+                  <button id="removeAll">Borrar todas</button>
+                  <ul class="w3-ul" id="list"></ul>
                 </td>
-
               </tr>
-
-              </div>
+            </div>
+          </div>
+        </div>
 
      <div class="agenda">
          <div class="table-responsive w3-responsive">
@@ -54,11 +61,11 @@
                      <tr class="w3-brown">
                          <th>Fecha</th>
                          <th>Hora</th>
-                         <th>Descripción</th>
+                         <th>Evento</th>
                          <th>Categoria</th>
                          <th>Fecha Futura</th>
-
-                     </tr>
+                         <th>Hora Futura</th>
+                    </tr>
                  </thead>
                  <tbody>
                      <!-- Aca se muestran los eventos-->
@@ -68,7 +75,6 @@
          </div>
      </div>
    </div>
-
 
    <script src="public/js/moment.js"></script>
    <script src="public/js/agenda.js"></script>

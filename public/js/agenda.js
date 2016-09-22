@@ -1,37 +1,44 @@
 const EVENTS = [{
     id: 1,
     title: 'evento de ejemplo 1',
-    category: 'la la la',
+    category: 'Trabajo',
+    fechafutura: '2017-10-30T22:00:00.000Z',
     dueDate: '2016-10-30T22:00:00.000Z'
 }, {
     id: 2,
     title: 'evento de ejemplo 2',
-    category: 'la la la',
+    category: 'Banda',
+    fechafutura: '2018-10-30T22:00:00.000Z',
     dueDate: '2016-10-30T23:00:00.000Z'
 }, {
     id: 3,
     title: 'evento de ejemplo 3',
-    category: 'la la la',
+    category: 'Deporte',
+    fechafutura: '2019-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
     title: 'evento de ejemplo 4',
-    category: 'la la la',
+    category: 'Sociales',
+    fechafutura: '2020-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T01:00:00.000Z'
 }, {
     id: 5,
     title: 'evento de ejemplo 5',
-    category: 'la la la',
+    category: 'Trabajo',
+    fechafutura: '2021-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T02:00:00.000Z'
 }, {
     id: 6,
     title: 'evento de ejemplo 6',
-    category: 'la la la',
+    category: 'Deporte',
+    fechafutura: '2022-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T03:00:00.000Z'
 }, {
     id: 7,
     title: 'evento de ejemplo 7',
     category: 'la la la',
+    fechafutura: '2023-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T04:00:00.000Z'
 }, ];
 
@@ -48,6 +55,28 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
     var pdayOfMonth = dayOfMonth;
     var month = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     var pMonth = month[monthNumber];
+
+    var diaDelMes = new Date(fechafutura);
+    var diaDelMes2 = diaDelMes.getUTCDate();
+    var numeroMes =  new Date(fechafutura);
+    var numeroMes = numeroMes.getUTCMonth();
+    var año = new Date(fechafutura);
+    var año2 = año.getUTCFullYear();
+    var diaDeSemana = new Date(fechafutura);
+    var diaDeSemana2 = diaDeSemana.getUTCDay();
+    var horas = new Date(fechafutura);
+    var horas2 = horas.getUTCHours();
+    var minutos = new Date(fechafutura);
+    var minutos2 = minutos.getUTCMinutes();
+    var segundos = new Date(fechafutura);
+    var segundos2 = segundos.getUTCSeconds();
+    var semana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    var fdiasDeSemana = semana[diaDeSemana2];
+    var fdiaDelMes = diaDelMes2;
+    var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    var fmeses = meses[numeroMes];
+
+
 
 
 
@@ -74,12 +103,15 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
               ${category}
           </div>
       </td>
-      <td class="agenda-fechafutura">
-          <div class="agenda-event">
-              <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
-              ${fechafutura}
-          </div>
+          <td class="agenda-date" class="active" rowspan="1">
+          <div class="diadelmes">${fdiaDelMes} </div>
+          <div class="shortdate text-muted">${fmeses}, ${año2}</div>
+          <div class="diadesemana">${fdiasDeSemana}</div>
+
       </td>
+      <td class="agenda-time">
+      ${horas2}:${minutos2}:${segundos2}
+
 
     </tr>
   `);
@@ -98,6 +130,6 @@ jQuery('#add').on('click', function() {
 EVENTS.forEach(function(event) {
 
     var d = new Date(event.dueDate);
-    addEventToAgenda(event.title, d, event.category);
+    addEventToAgenda(event.title, d, event.category, event.fechafutura);
 
 });
