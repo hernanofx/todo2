@@ -1,42 +1,42 @@
 const EVENTS = [{
     id: 1,
-    title: 'evento de ejemplo 1',
+    title: 'Realizar el trabajo',
     category: 'Trabajo',
     fechafutura: '2017-10-30T22:00:00.000Z',
     dueDate: '2016-10-30T22:00:00.000Z'
 }, {
     id: 2,
-    title: 'evento de ejemplo 2',
+    title: 'Ensayo en palermo',
     category: 'Banda',
     fechafutura: '2018-10-30T22:00:00.000Z',
     dueDate: '2016-10-30T23:00:00.000Z'
 }, {
     id: 3,
-    title: 'evento de ejemplo 3',
+    title: 'Partido de padel',
     category: 'Deporte',
     fechafutura: '2019-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
-    title: 'evento de ejemplo 4',
+    title: 'Juntada con amigos',
     category: 'Sociales',
     fechafutura: '2020-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T01:00:00.000Z'
 }, {
     id: 5,
-    title: 'evento de ejemplo 5',
+    title: 'Reunion con el jefe',
     category: 'Trabajo',
     fechafutura: '2021-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T02:00:00.000Z'
 }, {
     id: 6,
-    title: 'evento de ejemplo 6',
+    title: 'Partido de futbol',
     category: 'Deporte',
     fechafutura: '2022-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T03:00:00.000Z'
 }, {
     id: 7,
-    title: 'evento de ejemplo 7',
+    title: 'Reunion amigos del colegio',
     category: 'Sociales',
     fechafutura: '2023-10-30T22:00:00.000Z',
     dueDate: '2016-10-31T04:00:00.000Z'
@@ -82,37 +82,39 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
 
     jQuery('tbody').append(`
     <tr>
-          <td class="agenda-date" class="active" rowspan="1">
-          <div class="dayofmonth">${pdayOfMonth} </div>
-          <div class="shortdate text-muted">${pMonth}, ${year}</div>
-          <div class="dayofweek">${pdayOfWeek}</div>
+            <td class="agenda-date" class="active" rowspan="1">
+            <div class="dayofmonth">${fdiaDelMes} </div>
+            <div class="shortdate text-muted">${fmeses}, ${año2}</div>
+            <div class="dayofweek">${fdiasDeSemana}</div>
+            </td>
 
-      </td>
-      <td class="agenda-time">
-          ${hours}:${minutes}:${seconds}
-      </td>
-      <td class="agenda-type">
-          <div class="agenda-event">
+            <td class="agenda-time">
+            ${horas2}:${minutos2}:${segundos2}
+            </td>
+
+            <td class="agenda-type">
+            <div class="agenda-event">
               <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
               ${description}
-          </div>
-      </td>
-      <td class="agenda-events">
-          <div class="agenda-event">
+            </div>
+            </td>
+
+            <td class="agenda-events">
+            <div class="agenda-event">
               <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
               ${category}
-          </div>
-      </td>
-          <td class="agenda-date" class="active" rowspan="1">
-          <div class="dayofmonth">${fdiaDelMes} </div>
-          <div class="shortdate text-muted">${fmeses}, ${año2}</div>
-          <div class="dayofweek">${fdiasDeSemana}</div>
+              </div>
+              </td>
 
-      </td>
-      <td class="agenda-time">
-      ${horas2}:${minutos2}:${segundos2}
+            <td class="agenda-date" class="active" rowspan="1">
+            <div class="dayofmonth">${pdayOfMonth} </div>
+            <div class="shortdate text-muted">${pMonth}, ${year}</div>
+            <div class="dayofweek">${pdayOfWeek}</div>
+            </td>
 
-
+            <td class="agenda-time">
+              ${hours}:${minutes}:${seconds}
+          </td>
     </tr>
   `);
 }
