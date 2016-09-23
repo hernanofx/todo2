@@ -59,6 +59,16 @@ button#removeAll:hover {
     background-color: #ED7B65;
 }
 
+button#pendiente {
+    background-color: #C62D2D;
+}
+
+button#pendiente:hover {
+    background-color: #F06969;
+}
+
+
+
 button.removeMe {
     padding: 5px;
     font-size: 13px;
@@ -75,11 +85,11 @@ button.removeMe:hover {
 
 ul#list {
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
 }
 
 li {
     list-style: none;
-    font-size: 12px;
+    font-size: 16px;
     padding: 4px;
 }

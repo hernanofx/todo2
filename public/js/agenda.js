@@ -3,43 +3,43 @@ const EVENTS = [{
     title: 'Realizar el trabajo',
     category: 'Trabajo',
     fechafutura: '2017-10-30T22:00:00.000Z',
-    dueDate: '2016-10-30T22:00:00.000Z'
+    dueDate: '2016-08-06T22:00:00.000Z'
 }, {
     id: 2,
     title: 'Ensayo en palermo',
     category: 'Banda',
-    fechafutura: '2018-10-30T22:00:00.000Z',
-    dueDate: '2016-10-30T23:00:00.000Z'
+    fechafutura: '2018-07-16T22:00:00.000Z',
+    dueDate: '2016-06-16T23:00:00.000Z'
 }, {
     id: 3,
     title: 'Partido de padel',
     category: 'Deporte',
-    fechafutura: '2019-10-30T22:00:00.000Z',
+    fechafutura: '2019-02-03T22:00:00.000Z',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
     title: 'Juntada con amigos',
     category: 'Sociales',
-    fechafutura: '2020-10-30T22:00:00.000Z',
-    dueDate: '2016-10-31T01:00:00.000Z'
+    fechafutura: '2020-01-31T22:00:00.000Z',
+    dueDate: '2016-03-23T01:00:00.000Z'
 }, {
     id: 5,
     title: 'Reunion con el jefe',
     category: 'Trabajo',
-    fechafutura: '2021-10-30T22:00:00.000Z',
-    dueDate: '2016-10-31T02:00:00.000Z'
+    fechafutura: '2021-08-28T22:00:00.000Z',
+    dueDate: '2016-01-28T02:00:00.000Z'
 }, {
     id: 6,
     title: 'Partido de futbol',
     category: 'Deporte',
-    fechafutura: '2022-10-30T22:00:00.000Z',
-    dueDate: '2016-10-31T03:00:00.000Z'
+    fechafutura: '2022-06-24T22:00:00.000Z',
+    dueDate: '2016-04-14T03:00:00.000Z'
 }, {
     id: 7,
     title: 'Reunion amigos del colegio',
     category: 'Sociales',
-    fechafutura: '2023-10-30T22:00:00.000Z',
-    dueDate: '2016-10-31T04:00:00.000Z'
+    fechafutura: '2023-11-18T22:00:00.000Z',
+    dueDate: '2016-03-20T04:00:00.000Z'
 }, ];
 
 function addEventToAgenda(description, dueDate, category, fechafutura ) {
@@ -81,41 +81,42 @@ function addEventToAgenda(description, dueDate, category, fechafutura ) {
 
 
     jQuery('tbody').append(`
-    <tr>
+    <tr class ="">
             <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth">${fdiaDelMes} </div>
-            <div class="shortdate text-muted">${fmeses}, ${año2}</div>
-            <div class="dayofweek">${fdiasDeSemana}</div>
+            <div class="dayofmonth w3-text-blue-grey">${fdiaDelMes} </div>
+            <div class="shortdate text-muted w3-text-blue-grey">${fmeses}, ${año2}</div>
+            <div class="dayofweek w3-text-blue-grey">${fdiasDeSemana}</div>
             </td>
 
-            <td class="agenda-time w3-center">
+            <td class="agenda-time w3-center w3-text-blue-grey">
             ${horas2}:${minutos2}:${segundos2}
             </td>
 
             <td class="agenda-type">
-            <div class="agenda-event">
-              <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
+            <div class="agenda-event w3-text-black">
+              <i class="glyphicon glyphicon-list-alt text-muted" title="Repeating event"></i>
               ${description}
             </div>
             </td>
 
             <td class="agenda-events">
-            <div class="agenda-event">
-              <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>
-              ${category}
+            <div class="agenda-event w3-text-black">
+              <i class="glyphicon glyphicon-tag text-muted" title="Repeating event"></i>
+              <i>${category}</i>
               </div>
               </td>
 
             <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth">${pdayOfMonth} </div>
-            <div class="shortdate text-muted">${pMonth}, ${year}</div>
-            <div class="dayofweek">${pdayOfWeek}</div>
+            <div class="dayofmonth w3-text-grey">${pdayOfMonth} </div>
+            <div class="shortdate w3-text-grey text-muted">${pMonth}, ${year}</div>
+            <div class="dayofweek w3-text-grey">${pdayOfWeek}</div>
             </td>
 
-            <td class="agenda-time w3-center">
+            <td class="agenda-time w3-center w3-text-grey">
               ${hours}:${minutes}:${seconds}
           </td>
     </tr>
+
   `);
 }
 

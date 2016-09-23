@@ -17,25 +17,25 @@
 <body>
     <div class="wrapper">
         <div class="border">
-          <div class="w3-text-shadow w3-margin-right w3-margin-bottom">
-          <h2>Agenda y tareas<h2>
+            <div class="w3-text-shadow w3-margin-right w3-margin-bottom">
+                <h2>Calendario<h2>
           </div>
-
             <div class="w3-row-padding">
               <div class="w3-half">
                 <tr>
                   <td>
-                    <input type="text" id="inputevento" placeholder="    Evento">
+                    <input class="w3-input w3-border" type="text" id="inputevento" placeholder="    Evento">
                   </td>
               </div>
               <div class="w3-half">
                   <td>
-                    <input type="datetime-local" class="" id="fechafutura" placeholder="">
+                    <input class="w3-input w3-border" type="datetime-local" class="" id="fechafutura" placeholder="">
                   </td>
               </tr>
             </div>
             <br>
             <div class="w3-half">
+              <br>
               <tr class="">
                 <td>
                   <select class="w3-select w3-border w3-padding" id="inputeventocategoria" name="opciones">
@@ -49,21 +49,24 @@
                   </select>
                 </td>
             </div>
+            <br>
+            <br>
             <div class="w3-half">
                 <td>
-                  <button class="" id="add">Agregar</button>
-                  <button id="removeAll">Borrar todas</button>
-                  <ul class="w3-ul" id="list"></ul>
+                  <div class="w3-btn-group ">
+                      <button class="w3-btn w3-padding" style="width:50%" id="add">Agregar</button>
+                      <button class="w3-btn w3-padding" style="width:50%" id="removeAll">Borrar todas</button>
+                      <ul class="w3-ul" id="list">
+
+                  </div>
                 </td>
               </tr>
-            </div>
             <br>
           </div>
         </div>
-
      <div class="agenda">
-         <div class="table-responsive w3-responsive">
-             <table class="table table-condensed table-bordered w3-table-all w3-hoverable w3-striped w3-card-4">
+         <div class="table-responsive w3-responsive w3-margin-right">
+             <table  class="table table-condensed w3-table-all w3-hoverable w3-striped w3-card-4 ">
                  <thead>
                      <tr class="w3-pink">
                          <th class="w3-center" style="width:%">Fecha</th>
@@ -74,7 +77,7 @@
                          <th class="w3-center" style="width:12%">Hora Carga</th>
                     </tr>
                  </thead>
-                 <tbody>
+                 <tbody class="">
                      <!-- Aca se muestran los eventos-->
 
                  </tbody>
@@ -82,7 +85,6 @@
          </div>
      </div>
    </div>
-
    <script src="public/js/moment.js"></script>
    <script src="public/js/agenda.js"></script>
    <script src="public/js/todo.js"></script>

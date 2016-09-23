@@ -11,6 +11,7 @@ function addLi(targetUl) {
     if (inputText.split(' ').join('').length === 0) {
         alert('No pusiste nada');
         return false;
+
     }
 
     removeButton.className = 'removeMe';
