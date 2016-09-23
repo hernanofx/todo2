@@ -8,37 +8,37 @@ const EVENTS = [{
     id: 2,
     title: 'Ensayo en palermo',
     category: 'Banda',
-    fechafutura: '2018-07-16T22:00:00.000Z',
+    fechafutura: '2018-07-16T16:30:00.000Z',
     dueDate: '2016-06-16T23:00:00.000Z'
 }, {
     id: 3,
     title: 'Partido de padel',
     category: 'Deporte',
-    fechafutura: '2019-02-03T22:00:00.000Z',
+    fechafutura: '2019-02-03T08:00:00.000Z',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
     title: 'Juntada con amigos',
     category: 'Sociales',
-    fechafutura: '2020-01-31T22:00:00.000Z',
+    fechafutura: '2020-01-31T23:30:00.000Z',
     dueDate: '2016-03-23T01:00:00.000Z'
 }, {
     id: 5,
     title: 'Reunion con el jefe',
     category: 'Trabajo',
-    fechafutura: '2021-08-28T22:00:00.000Z',
+    fechafutura: '2021-08-28T05:05:00.000Z',
     dueDate: '2016-01-28T02:00:00.000Z'
 }, {
     id: 6,
     title: 'Partido de futbol',
     category: 'Deporte',
-    fechafutura: '2022-06-24T22:00:00.000Z',
+    fechafutura: '2022-06-24T19:23:00.000Z',
     dueDate: '2016-04-14T03:00:00.000Z'
 }, {
     id: 7,
     title: 'Reunion amigos del colegio',
     category: 'Sociales',
-    fechafutura: '2023-11-18T22:00:00.000Z',
+    fechafutura: '2023-11-18T11:10:00.000Z',
     dueDate: '2016-03-20T04:00:00.000Z'
 }, ];
 
