@@ -51,7 +51,7 @@ const EVENTS = [{
     dueDate: '2016-03-20T04:00:00.000Z'
 }, ];
 
-    //Función y variables de la fecha de carga / de comienzo / finalizacion del evento
+    //Función y variables de la fecha de carga  / de comienzo / finalizacion del evento
 function addEventToAgenda(description, dueDate, category, fechafutura, fechafinal ) {
     var dayOfMonth = dueDate.getUTCDate();
     var monthNumber =  dueDate.getUTCMonth();
@@ -90,17 +90,17 @@ function addEventToAgenda(description, dueDate, category, fechafutura, fechafina
     // Variables de la hora de finalización del evento
     var diaDelMesF = new Date(fechafinal);
     var diaDelMesF2 = diaDelMesF.getUTCDate();
-    var numeroMesF =  new Date(fechafutura);
+    var numeroMesF =  new Date(fechafinal);
     var numeroMesF = numeroMesF.getUTCMonth();
-    var añoF = new Date(fechafutura);
+    var añoF = new Date(fechafinal);
     var añoF2 = añoF.getUTCFullYear();
-    var diaDeSemanaF = new Date(fechafutura);
+    var diaDeSemanaF = new Date(fechafinal);
     var diaDeSemanaF2 = diaDeSemanaF.getUTCDay();
-    var horasF = new Date(fechafutura);
+    var horasF = new Date(fechafinal);
     var horasF2 = horasF.getUTCHours();
-    var minutosF = new Date(fechafutura);
+    var minutosF = new Date(fechafinal);
     var minutosF2 = minutosF.getUTCMinutes();
-    var segundosF = new Date(fechafutura);
+    var segundosF = new Date(fechafinal);
     var segundosF2 = segundosF.getUTCSeconds();
     var semanaF = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
     var fdiasDeSemanaF = semanaF[diaDeSemanaF2];
@@ -108,7 +108,7 @@ function addEventToAgenda(description, dueDate, category, fechafutura, fechafina
     var mesesF = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     var fmesesF = mesesF[numeroMesF];
 
-    //  Se insertan los datos en una tabla
+    //  Se insertan los datos obtenidos en una tabla del index
 
     jQuery('tbody').append(`
     <tr class ="">
@@ -162,7 +162,7 @@ function addEventToAgenda(description, dueDate, category, fechafutura, fechafina
 }
 
     // Sacamos los valores de los inputs y los agregamos a la función addEventToAgenda
-    
+
 jQuery('#add').on('click', function() {
     var value_evento = jQuery('#inputevento').val();
     var value_categoria = jQuery('#inputeventocategoria').val();

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tareas</title>
+    <title>Calendario</title>
     <link rel="stylesheet" type="text/css" href="public/css/agenda.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/styles.css" media="screen" />
@@ -17,13 +17,13 @@
 
 <body>
     <div class="wrapper">
-        <div class="border w3-margin-right">
+        <div class="border w3-margin-right" id="todoeldocumento">
             <div class="w3-container w3-pink w3-margin-right w3-round" id="cabecera">
                 <span class="w3-closebtn w3-btn-floating w3-pink" onclick="this.parentElement.style.display='none'">x</span>
                 <h3><b>Calendario</b></h3>
             </div>
             <div class="w3-margin-right w3-row " id="nuevacarga" style="display:none;">
-              <span class="w3-closebtn w3-btn-floating w3-white" style="width:4%" onclick="this.parentElement.style.display='none'">x</span>
+                <span class="w3-closebtn w3-btn-floating w3-white" style="width:4%" onclick="this.parentElement.style.display='none'">x</span>
                 <div class="w3-col" style="width:28%">
                     <th>
                         <input class="w3-input w3-border w3-round-large" type="text" id="inputevento" placeholder="Evento">
@@ -31,12 +31,12 @@
                 </div>
                 <div class="w3-col" style="width:22%">
                     <th>
-                        <input class="w3-input w3-border w3-round-large" style="width:100%" type="datetime-local" id="fechafutura" placeholder="">
+                        <input class="w3-input w3-border w3-round-large datepicker" style="width:100%" type="datetime-local" id="fechafutura" placeholder="Comienzo">
                     </th>
                 </div>
                 <div class="w3-col" style="width:22%">
                     <th>
-                        <input class="w3-input w3-border w3-round-large" style="width:100%" type="datetime-local" id="fechafinal" placeholder="">
+                        <input class="w3-input w3-border w3-round-large datepicker" style="width:100%" type="datetime-local" id="fechafinal" placeholder="Finalización">
                     </th>
                 </div>
                 <div class="w3-col" style="width:24%">
@@ -53,7 +53,7 @@
                     </th>
                 </div>
             </div>
-            <div class="w3-dropdown-hover w3-right w3-margin-right w3-btn-group">
+            <div class="w3-dropdown-hover w3-right w3-margin-right w3-btn-group" id="botonesrangosdefecha">
                 <button class="w3-btn w3-green">Hoy</button>
                 <button class="w3-btn w3-purple">Semana</button>
                 <button class="w3-btn w3-deep-purple">Mes</button>
@@ -64,11 +64,11 @@
                     <a href="#">Mes</a>
                 </div>
             </div>
-            <div class="w3-btn-group w3-left" style="width:50%">
+            <div class="w3-btn-group w3-left" style="width:50%" id="botonesagregarborrar">
                 <button type="button" class="w3-btn w3-blue w3-round-large" id="add">Agregar</button>
                 <button type="button" class="w3-btn w3-red w3-round-large" id="removeAll">Borrar todo</button>
                 <button class="w3-btn w3-brown w3-round-large" onclick="document.getElementById('nuevacarga').style.display='block'">Nuevo evento</button>
-
+                <button class="w3-btn w3-indigo w3-round-large" onclick="document.getElementById('tablageneral').style.display='block'">Ver todos</button>
                 <br>
 
                 <ul class="w3-ul w3-margin-right" id="list">
@@ -77,10 +77,10 @@
 
             <br>
 
-            <div class="agenda w3-row w3-margin-right">
-
+            <div class="agenda w3-row w3-margin-right" id="tablageneral">
                 <div class="table-responsive w3-responsive w3-col w3-round-large panel w3-hoverable" style="width:100%">
                     <table class="table table-condensed w3-table-all w3-striped w3-card-4">
+
                         <thead>
                             <tr class="w3-pink">
                                 <th class="w3-center" style="width:11%">Fecha</th>
@@ -91,6 +91,8 @@
                                 <th class="w3-center" style="width:8%">Horalog</th>
                                 <th class="w3-center" style="width:11%">Fechaf</th>
                                 <th class="w3-center" style="width:8%">Horaf</th>
+                                <th><span class="w3-closebtn w3-btn-floating w3-pink w3-center" style="width:%" onclick="document.getElementById('tablageneral').style.display='none'">x</span></th>
+
 
                             </tr>
                         </thead>
@@ -104,12 +106,11 @@
         </div>
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/inputs.min.js"></script>
+        <script src="public/js/placeholder.js"></script>
         <script src="public/js/moment.js"></script>
         <script src="public/js/agenda.js"></script>
         <script src="public/js/todo.js"></script>
         <script src="public/js/jquery.js"></script>
-
-
 </body>
 
 </html>

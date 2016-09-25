@@ -1,3 +1,5 @@
+// Funciones de la todo list
+
 var ul = document.getElementById('list'),
     removeAll = document.getElementById('removeAll'),
     add = document.getElementById('add');
