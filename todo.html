@@ -21,6 +21,9 @@
             <div class="w3-container w3-pink w3-margin-right w3-round" id="cabecera">
                 <span class="w3-closebtn w3-btn-floating w3-pink" onclick="this.parentElement.style.display='none'">x</span>
                 <h3><b>Calendario</b></h3>
+                <label id="currentdate">
+                <button type="button" class="w3-pink" onclick="ShowDate()">Show current Date</button>
+
             </div>
             <div class="w3-margin-right w3-row " id="nuevacarga" style="display:none;">
                 <span class="w3-closebtn w3-btn-floating w3-white" style="width:4%" onclick="this.parentElement.style.display='none'">x</span>
@@ -42,14 +45,14 @@
                 <div class="w3-col" style="width:24%">
                     <th>
                         <select class="w3-select w3-border w3-round-large" style="width:100%" id="inputeventocategoria" name="opciones">
-                  <option value="" disabled selected>Categoria</option>
-                  <option value="Bandas">Bandas</option>
-                  <option value="Deportes">Deporte</option>
-                  <option value="Personales">Personales</option>
-                  <option value="Sociales">Sociales</option>
-                  <option value="Trabajos">Trabajos</option>
-                  <option value="Tramites">Trámites</option>
-                </select>
+                            <option value="" disabled selected>Categoria</option>
+                            <option value="Bandas">Bandas</option>
+                            <option value="Deportes">Deporte</option>
+                            <option value="Personales">Personales</option>
+                            <option value="Sociales">Sociales</option>
+                            <option value="Trabajos">Trabajos</option>
+                            <option value="Tramites">Trámites</option>
+                        </select>
                     </th>
                 </div>
             </div>
@@ -107,6 +110,7 @@
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/inputs.min.js"></script>
         <script src="public/js/placeholder.js"></script>
+        <script src="public/js/localdate.js"></script>
         <script src="public/js/moment.js"></script>
         <script src="public/js/agenda.js"></script>
         <script src="public/js/todo.js"></script>
