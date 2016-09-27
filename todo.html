@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calendario</title>
     <link rel="stylesheet" type="text/css" href="public/css/agenda.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="public/css/reloj.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/styles.css" media="screen" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="public/js/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,13 +19,30 @@
 <body>
     <div class="wrapper">
         <div class="border w3-margin-right" id="todoeldocumento">
-            <div class="w3-container w3-pink w3-margin-right w3-round" id="cabecera">
-                <span class="w3-closebtn w3-btn-floating w3-pink" onclick="this.parentElement.style.display='none'">x</span>
-                <h3><b>Calendario</b></h3>
-                <label id="currentdate">
-                <button type="button" class="w3-pink" onclick="ShowDate()">Show current Date</button>
+          <div class="wrap w3-text-white">
+              <div class="widget">
+                <div class="fecha">
+                  <p id="diaSemana" class="diaSemana"></p>
+                  <p id="dia" class="dia"></p>
+                  <p>de </p>
+                  <p id="mes" class="mes"></p>
+                  <p>del </p>
+                  <p id="year" class="year"></p>
+                </div>
 
+                <div class="reloj">
+                  <p id="horas" class="horas"></p>
+                  <p>:</p>
+                  <p id="minutos" class="minutos"></p>
+                  <p>:</p>
+                  <div class="caja-segundos">
+                    <p id="ampm" class="ampm"></p>
+                    <p id="segundos" class="segundos"></p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="w3-margin-right w3-row " id="nuevacarga" style="display:none;">
                 <span class="w3-closebtn w3-btn-floating w3-white" style="width:4%" onclick="this.parentElement.style.display='none'">x</span>
                 <div class="w3-col" style="width:28%">
@@ -107,10 +125,10 @@
                 </div>
             </div>
         </div>
+        <script src="public/js/reloj.js"></script>
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/inputs.min.js"></script>
         <script src="public/js/placeholder.js"></script>
-        <script src="public/js/localdate.js"></script>
         <script src="public/js/moment.js"></script>
         <script src="public/js/agenda.js"></script>
         <script src="public/js/todo.js"></script>
