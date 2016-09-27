@@ -5,3 +5,6 @@ document.getElementById('nuevacarga').style.display = 'block';}
 
 function mostrar(){
 document.getElementById('tablageneral').style.display = 'block';}
+
+function mostrar(){
+document.getElementById('widget').style.display = 'block';}

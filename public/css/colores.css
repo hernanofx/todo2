@@ -11,6 +11,7 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
+	padding: 20px;
 }
 
 .borrartodo{
@@ -18,7 +19,7 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .nuevoevento {
@@ -26,7 +27,7 @@
   color:#000000;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .vertodos {
@@ -34,15 +35,24 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
+
+.verfechayhora {
+  background: #F77869;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+	padding: 20px;
+}
+
 
 .hoy {
   background: #39A036;
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .semana {
@@ -50,7 +60,7 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .mes2 {
@@ -58,7 +68,7 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .proximos {
@@ -66,7 +76,7 @@
   color:#fff;
 	font-size: 13px;
   font-family: Comfortaa;
-
+	padding: 20px;
 }
 
 .cabeceratabla {
@@ -76,3 +86,11 @@
   font-family: Alfa+Slab+One;
 	align-content: center;
 	}
+
+.botonesagregarborrar {
+	position: absolute;
+	right: 0px;
+	width: 300px;
+	border: 3px solid #73AD21;
+	padding: 20px;
+}

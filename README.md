@@ -6,3 +6,9 @@
  *Vista previa*
 
  ![Vista previa](https://raw.githubusercontent.com/hernanofx/todo2/master/public/imagenes/Preview.png)
+
+ ![Vista previa](https://raw.githubusercontent.com/hernanofx/todo2/master/public/imagenes/Preview2.png)
+
+ ![Vista previa](https://raw.githubusercontent.com/hernanofx/todo2/master/public/imagenes/Preview3.png)
+
+ ![Vista previa](https://raw.githubusercontent.com/hernanofx/todo2/master/public/imagenes/Preview4.png)

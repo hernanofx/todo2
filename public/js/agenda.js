@@ -5,49 +5,49 @@ const EVENTS = [{
     title: 'Realizar el trabajo',
     category: 'Trabajo',
     fechafutura: '2017-10-30T22:00:00.000Z',
-    fechafinal: '2017-12-30T22:00:00.000Z',
+    fechafinal: '2017-12-20T22:00:00.000Z',
     dueDate: '2016-08-06T22:00:00.000Z'
 }, {
     id: 2,
     title: 'Ensayo en palermo',
     category: 'Banda',
     fechafutura: '2018-07-16T16:30:00.000Z',
-    fechafinal: '2018-12-30T22:00:00.000Z',
+    fechafinal: '2018-12-05T22:00:00.000Z',
     dueDate: '2016-06-16T23:00:00.000Z'
 }, {
     id: 3,
     title: 'Partido de padel',
     category: 'Deporte',
     fechafutura: '2019-02-03T08:00:00.000Z',
-    fechafinal: '2019-12-30T22:00:00.000Z',
+    fechafinal: '2019-12-17T22:00:00.000Z',
     dueDate: '2016-10-31T00:00:00.000Z'
 }, {
     id: 4,
     title: 'Juntada con amigos',
     category: 'Sociales',
     fechafutura: '2020-01-31T23:30:00.000Z',
-    fechafinal: '2020-12-30T22:00:00.000Z',
+    fechafinal: '2020-12-04T22:00:00.000Z',
     dueDate: '2016-03-23T01:00:00.000Z'
 }, {
     id: 5,
     title: 'Reunion con el jefe',
     category: 'Trabajo',
     fechafutura: '2021-08-28T05:05:00.000Z',
-    fechafinal: '2021-12-30T22:00:00.000Z',
+    fechafinal: '2021-12-15T22:00:00.000Z',
     dueDate: '2016-01-28T02:00:00.000Z'
 }, {
     id: 6,
     title: 'Partido de futbol',
     category: 'Deporte',
     fechafutura: '2022-06-24T19:23:00.000Z',
-    fechafinal: '2022-12-30T22:00:00.000Z',
+    fechafinal: '2022-12-26T22:00:00.000Z',
     dueDate: '2016-04-14T03:00:00.000Z'
 }, {
     id: 7,
     title: 'Reunion amigos del colegio',
     category: 'Sociales',
     fechafutura: '2023-11-18T11:10:00.000Z',
-    fechafinal: '2023-12-30T22:00:00.000Z',
+    fechafinal: '2023-12-01T22:00:00.000Z',
     dueDate: '2016-03-20T04:00:00.000Z'
 }, ];
 
@@ -112,6 +112,7 @@ function addEventToAgenda(description, dueDate, category, fechafutura, fechafina
 
     jQuery('tbody').append(`
     <tr class ="">
+
             <td class="agenda-date" class="active" rowspan="1">
             <div class="dayofmonth w3-text-blue-grey">${fdiaDelMes} </div>
             <div class="shortdate text-muted w3-text-blue-grey">${fmeses}, ${año2}</div>

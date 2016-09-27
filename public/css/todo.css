@@ -60,11 +60,11 @@ button#removeAll:hover {
 }
 
 button#pendiente {
-    background-color: #C62D2D;
+    background-color: #03006E;
 }
 
 button#pendiente:hover {
-    background-color: #F06969;
+    background-color: #7977D9;
 }
 
 
@@ -77,10 +77,11 @@ button.removeMe {
 }
 
 button.removeMe {
-    background-color: #A8E98E;
+    background-color: #DC9F1C;
+    color: #FFF
 }
 button.removeMe:hover {
-    background-color: #46b98a;
+    background-color: #CDA653;
 }
 
 ul#list {
