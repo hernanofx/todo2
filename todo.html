@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="public/css/reloj.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/todo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="public/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="public/css/colores.css" media="screen" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Economica|Oswald|Alfa+Slab+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -19,30 +20,29 @@
 <body>
     <div class="wrapper">
         <div class="border w3-margin-right" id="todoeldocumento">
-          <div class="wrap w3-text-white">
-              <div class="widget">
-                <div class="fecha">
-                  <p id="diaSemana" class="diaSemana"></p>
-                  <p id="dia" class="dia"></p>
-                  <p>de </p>
-                  <p id="mes" class="mes"></p>
-                  <p>del </p>
-                  <p id="year" class="year"></p>
-                </div>
+            <div class="wrap w3-text-white">
+                <div class="widget">
+                    <div class="fecha">
+                        <p id="diaSemana" class="diaSemana"></p>
+                        <p id="dia" class="dia"></p>
+                        <p>de </p>
+                        <p id="mes" class="mes"></p>
+                        <p>del </p>
+                        <p id="year" class="year"></p>
+                    </div>
 
-                <div class="reloj">
-                  <p id="horas" class="horas"></p>
-                  <p>:</p>
-                  <p id="minutos" class="minutos"></p>
-                  <p>:</p>
-                  <div class="caja-segundos">
-                    <p id="ampm" class="ampm"></p>
-                    <p id="segundos" class="segundos"></p>
-                  </div>
+                    <div class="reloj">
+                        <p id="horas" class="horas"></p>
+                        <p>:</p>
+                        <p id="minutos" class="minutos"></p>
+                        <p>:</p>
+                        <div class="caja-segundos">
+                            <p id="ampm" class="ampm"></p>
+                            <p id="segundos" class="segundos"></p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-
             <div class="w3-margin-right w3-row " id="nuevacarga" style="display:none;">
                 <span class="w3-closebtn w3-btn-floating w3-white" style="width:4%" onclick="this.parentElement.style.display='none'">x</span>
                 <div class="w3-col" style="width:28%">
@@ -74,65 +74,58 @@
                     </th>
                 </div>
             </div>
-            <div class="w3-dropdown-hover w3-right w3-margin-right w3-btn-group" id="botonesrangosdefecha">
-                <button class="w3-btn w3-green">Hoy</button>
-                <button class="w3-btn w3-purple">Semana</button>
-                <button class="w3-btn w3-deep-purple">Mes</button>
-                <button class="w3-btn w3-teal">Próximos</button>
-                <div class="w3-dropdown-content w3-border" style="right:0">
-                    <a href="#">Hoy</a>
-                    <a href="#">Semana</a>
-                    <a href="#">Mes</a>
-                </div>
-            </div>
-            <div class="w3-btn-group w3-left" style="width:50%" id="botonesagregarborrar">
-                <button type="button" class="w3-btn w3-blue w3-round-large" id="add">Agregar</button>
-                <button type="button" class="w3-btn w3-red w3-round-large" id="removeAll">Borrar todo</button>
-                <button class="w3-btn w3-brown w3-round-large" onclick="document.getElementById('nuevacarga').style.display='block'">Nuevo evento</button>
-                <button class="w3-btn w3-indigo w3-round-large" onclick="document.getElementById('tablageneral').style.display='block'">Ver todos</button>
-                <br>
-
-                <ul class="w3-ul w3-margin-right" id="list">
-            </div>
-
-
-            <br>
-
-            <div class="agenda w3-row w3-margin-right" id="tablageneral">
-                <div class="table-responsive w3-responsive w3-col w3-round-large panel w3-hoverable" style="width:100%">
-                    <table class="table table-condensed w3-table-all w3-striped w3-card-4">
-
-                        <thead>
-                            <tr class="w3-pink">
-                                <th class="w3-center" style="width:11%">Fecha</th>
-                                <th class="w3-center" style="width:8%">Hora</th>
-                                <th class="w3-center" style="width:20%">Evento</th>
-                                <th class="w3-center" style="width:12%">Categoria</th>
-                                <th class="w3-center" style="width:11%">Fechalog</th>
-                                <th class="w3-center" style="width:8%">Horalog</th>
-                                <th class="w3-center" style="width:11%">Fechaf</th>
-                                <th class="w3-center" style="width:8%">Horaf</th>
-                                <th><span class="w3-closebtn w3-btn-floating w3-pink w3-center" style="width:%" onclick="document.getElementById('tablageneral').style.display='none'">x</span></th>
-
-
-                            </tr>
-                        </thead>
-                        <tbody class="">
-                            <!-- Aca se muestran los eventos-->
-
-                        </tbody>
-                    </table>
-                </div>
+            <div class="w3-dropdown-hover w3-right w3-btn-group" id="botonesrangosdefecha">
+                <button class="w3-btn hoy">Hoy</button>
+                <button class="w3-btn semana">Semana</button>
+                <button class="w3-btn mes2">Mes</button>
+                <button class="w3-btn proximos">Próximos</button>
             </div>
         </div>
-        <script src="public/js/reloj.js"></script>
-        <script src="public/js/jquery.min.js"></script>
-        <script src="public/js/inputs.min.js"></script>
-        <script src="public/js/placeholder.js"></script>
-        <script src="public/js/moment.js"></script>
-        <script src="public/js/agenda.js"></script>
-        <script src="public/js/todo.js"></script>
-        <script src="public/js/jquery.js"></script>
+        <div class="w3-btn-group w3-left" style="width:50%" id="botonesagregarborrar">
+            <button type="button" class="w3-btn agregar w3-round-large" id="add">Agregar</button>
+            <button type="button" class="w3-btn borrartodo w3-round-large" id="removeAll">Borrar todo</button>
+            <button class="w3-btn nuevoevento w3-round-large" onclick="document.getElementById('nuevacarga').style.display='block'">Nuevo evento</button>
+            <button class="w3-btn vertodos w3-round-large" onclick="document.getElementById('tablageneral').style.display='block'">Ver todos</button>
+            <br>
+
+            <ul class="w3-ul w3-margin-right" id="list">
+        </div>
+
+
+        <br>
+
+        <div class="agenda w3-row w3-margin-right" id="tablageneral">
+            <div class="table-responsive w3-responsive w3-col w3-round-large panel w3-hoverable " style="width:100%">
+                <table class="table table-condensed w3-table-all w3-striped w3-card-4 ">
+                    <thead class="">
+                        <tr class="cabeceratabla">
+                            <th class="w3-center" style="width:11%">Fecha</th>
+                            <th class="w3-center" style="width:8%">Hora</th>
+                            <th class="w3-center" style="width:20%">Evento</th>
+                            <th class="w3-center" style="width:12%">Categoria</th>
+                            <th class="w3-center" style="width:11%">Fechalog</th>
+                            <th class="w3-center" style="width:8%">Horalog</th>
+                            <th class="w3-center" style="width:11%">Fechaf</th>
+                            <th class="w3-center" style="width:8%">Horaf</th>
+                            <th><span class="w3-closebtn w3-btn-floating cabeceratabla w3-center" style="width:%" onclick="document.getElementById('tablageneral').style.display='none'">x</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <!-- Aca se muestran los eventos-->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="public/js/reloj.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/inputs.min.js"></script>
+    <script src="public/js/placeholder.js"></script>
+    <script src="public/js/moment.js"></script>
+    <script src="public/js/agenda.js"></script>
+    <script src="public/js/todo.js"></script>
+    <script src="public/js/jquery.js"></script>
 </body>
 
 </html>

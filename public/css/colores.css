@@ -1,0 +1,78 @@
+* {
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.agregar {
+  background: #F0F0F0;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+}
+
+.borrartodo{
+  background: #ED8485;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.nuevoevento {
+  background: #89ED84;
+  color:#000000;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.vertodos {
+  background: #6971F7;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.hoy {
+  background: #39A036;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.semana {
+  background: #E969E6;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.mes2 {
+  background: #B247F5;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.proximos {
+  background: #2895DB;
+  color:#fff;
+	font-size: 13px;
+  font-family: Comfortaa;
+
+}
+
+.cabeceratabla {
+	color: #fff!important;
+	background-color: #475376!important;
+  font-size: 16px;
+  font-family: Alfa+Slab+One;
+	align-content: center;
+	}
