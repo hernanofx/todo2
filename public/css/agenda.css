@@ -9,15 +9,27 @@
 
 .agenda .agenda-date .dayofmonth {
     width: 40px;
-    font-size: 36px;
+    font-size: 30px; font-weight: bold; color: #fff; text-transform: uppercase;
     line-height: 36px;
     float: left;
-    text-align: right;
+    text-align: center;
     margin-right: 10px;
-}
+    background: #E2C6C6;
+  	background: linear-gradient(top, #E2C6C6 0%, #EC6A6A 100%);
+  	background: -moz-linear-gradient(top, #E2C6C6 0%, #EC6A6A 100%);
+  	background: -webkit-linear-gradient(top, #E2C6C6 0%, #EC6A6A 100%);
+    display: block;
+    border-top: 3px solid #EC6A6A;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+  	-webkit-border-radius: 0 0 10px 10px;
+  	padding: 3px 0 6px 0;
+  }
 
-.agenda .agenda-date .shortdate {
+
+.agenda .agenda-date .shortdate .dayofweek {
     font-size: 0.75em;
+
 }
 
 

@@ -108,49 +108,44 @@ function addEventToAgenda(description, dueDate, category, fechafutura, fechafina
     var mesesF = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     var fmesesF = mesesF[numeroMesF];
 
-    //  Se insertan los datos obtenidos en una tabla del index
+    //  Se insertan los datos obtenidos en una tabla
 
     jQuery('tbody').append(`
     <tr class ="">
 
-            <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth w3-text-blue-grey">${fdiaDelMes} </div>
-            <div class="dayofweek w3-text-blue-grey">${fdiasDeSemana}, ${horas2}:${minutos2}</div>
-            <div class="shortdate text-muted w3-text-blue-grey">${fmeses}, ${año2}</div>
+            <td class="agenda-date">
+            <div class="dayofmonth">${fdiaDelMes} </div>
+            <div class="dayofweek">${fdiasDeSemana},${horas2}:${minutos2}</div>
+            <div class="shortdate text-muted">${fmeses}, ${año2}</div>
             </div>
             </td>
 
-            <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth w3-text-blue-grey">${fdiaDelMesF} </div>
-            <div class="dayofweek w3-text-blue-grey">${fdiasDeSemanaF}, ${horasF2}:${minutosF2}</div>
-            <div class="shortdate text-muted w3-text-blue-grey">${fmesesF}, ${añoF2}</div>
+            <td class="agenda-date">
+            <div class="dayofmonth ">${fdiaDelMesF} </div>
+            <div class="dayofweek">${fdiasDeSemanaF}, ${horasF2}:${minutosF2}</div>
+            <div class="shortdate text-muted">${fmesesF}, ${añoF2}</div>
             </td>
 
 
             <td class="agenda-type">
-            <div class="agenda-event w3-text-black">
+            <div class="agenda-event">
               <i class="glyphicon glyphicon-list-alt text-muted" title="Repeating event"></i>
               ${description}
             </div>
             </td>
 
             <td class="agenda-events">
-            <div class="agenda-event w3-text-black">
+            <div class="agenda-event">
               <i class="glyphicon glyphicon-tag text-muted" title="Repeating event"></i>
               <i>${category}</i>
               </div>
               </td>
 
-            <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth w3-text-grey">${pdayOfMonth} </div>
-            <div class="shortdate w3-text-grey text-muted">${pMonth}, ${year}</div>
-            <div class="dayofweek w3-text-grey">${pdayOfWeek}</div>
+            <td class="agenda-date">
+            <div class="dayofmonth ">${pdayOfMonth} </div>
+            <div class="dayofweek">${pdayOfWeek},${hours}:${minutes}:${seconds}</div>
+            <div class="shortdate text-muted">${pMonth}, ${year}</div>
             </td>
-
-            <td class="agenda-time w3-center w3-text-grey">
-              ${hours}:${minutes}:${seconds}
-          </td>
-
 
     </tr>
 
