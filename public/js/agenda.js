@@ -53,13 +53,13 @@ const EVENTS = [{
 
     //Función y variables de la fecha de carga  / de comienzo / finalizacion del evento
 function addEventToAgenda(description, dueDate, category, fechafutura, fechafinal ) {
-    var dayOfMonth = dueDate.getUTCDate();
-    var monthNumber =  dueDate.getUTCMonth();
-    var year = dueDate.getUTCFullYear();
-    var dayOfWeek = dueDate.getUTCDay();
-    var hours = dueDate.getUTCHours();
-    var minutes = dueDate.getUTCMinutes();
-    var seconds = dueDate.getUTCSeconds();
+    var dayOfMonth = dueDate.getDate();
+    var monthNumber =  dueDate.getMonth();
+    var year = dueDate.getFullYear();
+    var dayOfWeek = dueDate.getDay();
+    var hours = dueDate.getHours();
+    var minutes = dueDate.getMinutes();
+    var seconds = dueDate.getSeconds();
     var week = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
     var pdayOfWeek = week[dayOfWeek];
     var pdayOfMonth = dayOfMonth;
